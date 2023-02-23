@@ -1,0 +1,6 @@
+As imagens que estão nesta pasta estão na resolução 400x400.
+A foto nomeada de "fotocortadap1" é uma foto com 2 autores 
+A foto nomeada de "fotocortadap2" é uma foto com os outros 2 autores
+
+*Não se assute com a data de modificação. Foi apenas a bateria do computador
+que deu problema e o windows pegou a data do BIOS.
