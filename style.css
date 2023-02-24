@@ -8,47 +8,40 @@
 }
 
 body{
-    background: white;
+    background: #f5f3f3;
     min-height: 100vh;
-    overflow-x: hidden;
 }
 
 header{
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
+    padding: 30px 100px;
+    z-index: 1000;
 }
-header h1{
-    margin: auto;
+
+header h2{ 
+    font-size: 2.1em;
     text-align: center;
-    line-height: 35px;
-}
-header .navigation{
+    pointer-events: none;
+} /* TITULO 'PARNASIANISMO PORTUGUÊS'*/
+
+header ul{
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-header .navigation li{
     list-style: none;
-    margin: 20px;
+    margin-left: 10px;
+    z-index: 1000;
 }
 
-header .navigation li a{
-    color: #111;
+header ul a{
     text-decoration: none;
-    font-weight: 600;
+    color: #111;
     padding: 6px 15px;
     border-radius: 20px;
 }
 
-header .navigation li a:hover, header .navigation li a.active{
-    background: #111;
+header ul a:hover, header ul a.active{
+    background-color: #111;
     color: white;
 }
 
@@ -57,67 +50,106 @@ section{
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 100%;
     height: 100vh;
+}
+
+section img{
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
-}
-/*section img{
-    width: 100%;
-    position: absolute;
-}*/
-
-
-.autores{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-section img#antoniofeijo{
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translate(-50%,-50%);
-    width: 20vw;
-}
-
-section img#cesarioverde{
-    position: absolute;
-    top: 44%;
-    left: 30%;
-    transform: translate(-50%,-50%);
-    width: 20vw;
-}
-
-section img#joaopenha{
-    position: absolute;
-    top: 56%;
-    left: 70%;
-    transform: translate(-50%,-50%);
-    width: 20vw;
-}
-
-section img#goncalvescrespo{
-    position: absolute;
-    top: 43%;
-    left: 90%;
-    transform: translate(-50%,-50%);
-    width: 20vw;
+    pointer-events: none;
 }
 
 section img#teofilobraga{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 20vw;
+    z-index: 100;
 }
 
-
-.texto{
+div.text{
     position: relative;
     padding: 100px;
 }
 
-#tituloparnasianismo{
-    margin: 20px 0px;
+div.text h2{
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+div.text p{
+    line-height: 30px;
+    text-indent: 30px;
+    text-align: justify;
+}
+
+
+@media (max-width: 1200px){
+
+    header{
+        padding: 20px;
+    }
+
+    header h2{
+        font-size: 1.5em;
+    }
+
+    header .navigation{
+        display: none;
+    }
+
+    #header .navigation.active{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #111;
+    }
+
+    #header ul{
+        margin-left: 0;
+    }
+
+    #header li a{
+        display: inline-block;
+        font-size: 1.5em;
+        margin: 5px 0;
+        border-radius: 30px;
+        background: gray;
+    }
+    
+    .toggle{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url(images/menu.png);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 10000;
+    }
+
+    .toggle.active{
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: url(images/close.png);
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 10000;
+    }
+
+    div.texto h2{
+        font-size: 1.5em;
+    }
+    div.texto p{
+        font-size: 1.15vw;
+    }
 }
